@@ -1,0 +1,45 @@
+<h1>Course#new</h1>
+<p>Find me in app/views/course/new.html.erb</p>
+
+
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="Course new">
+  <h2>Create Course</h2>
+
+  <%= form_for(:Course, :url => {:action => 'create'}) do |f| %>
+
+    <table summary="Section form fields">
+      <tr>
+        <th>Page ID</th>
+        <td><%= f.text_field(:page_id) %></td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th>Position</th>
+        <td><%= f.text_field(:position) %></td>
+      </tr>
+      <tr>
+        <th>Visible</th>
+        <td><%= f.text_field(:visible) %></td>
+      </tr>
+      <tr>
+        <th>Content Type</th>
+        <td><%= f.text_field(:content_type) %></td>
+      </tr>
+      <tr>
+        <th>Content</th>
+        <td><%= f.text_field(:content) %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Course") %>
+    </div>
+
+  <% end %>
+</div>

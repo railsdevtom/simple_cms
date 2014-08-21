@@ -1,0 +1,51 @@
+<h1>Course#show</h1>
+<p>Find me in app/views/course/show.html.erb</p>
+
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="Course show">
+  <h2>Show Course</h2>
+
+  <table summary="Course detail view">
+    <tr>
+      <th>Page ID</th>
+      <td><%= @course.page_id %></td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td><%= @course.name %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @course.position %></td>
+    </tr>
+    <tr>
+      <th>Visible?</th>
+      <td><%= @course.visible ? 'true' : 'false' %></td>
+    </tr>
+    <tr>
+      <th>Content Type</th>
+      <td><%= @course.content_type %></td>
+    </tr>
+    <tr>
+      <th>Content</th>
+      <td><%= @course.content %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @course.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @course.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

@@ -1,0 +1,29 @@
+<h1>Course#index</h1>
+<p>Find me in app/views/course/index.html.erb</p>
+
+
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="course index">
+  <h2>Course</h2>
+
+  <%= link_to("Add New Course", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="Course list">
+    <tr class="header">
+      <th>&nbsp;</th>
+      <th>Page ID</th>
+      <th>Section</th>
+      <th>Content Type</th>
+      <th>Visible</th>
+      <th>Actions</th>
+    </tr>
+
+</td>
+
+  
+ 
